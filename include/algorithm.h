@@ -12,7 +12,7 @@ public:
     Algorithm(std::string name, 
               int nr_cascade_iterations,
               int (*block_size_function)(int iteration_nr, double estimated_bit_error_rate,
-                                         int key_size),
+                                         unsigned long key_size),
               int nr_biconf_iterations,
               bool biconf_error_free_streak,
               bool biconf_correct_complement,
@@ -23,7 +23,7 @@ public:
     static std::vector<std::string> get_all_algorithm_names();
     std::string name;
     int nr_cascade_iterations;
-    int (*block_size_function)(int iteration_nr, double estimated_bit_error_rate, int key_size);
+    int (*block_size_function)(int iteration_nr, double estimated_bit_error_rate, unsigned long key_size);
     int nr_biconf_iterations;
     bool biconf_error_free_streak;
     bool biconf_correct_complement;

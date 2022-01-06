@@ -12,7 +12,7 @@ class Serie
 public:
     std::string name;
     std::string algorithm;
-    std::vector<int> key_sizes;
+    std::vector<unsigned long> key_sizes;
     std::vector<double> error_rates;
     int runs;
 };

@@ -56,7 +56,7 @@ std::vector<std::string> Algorithm::get_all_algorithm_names()
 }
 
 static int original_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                        int key_size)
+                                        unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;
@@ -82,7 +82,7 @@ Algorithm original_algorithm(
 // Name in Andre Reis Thesis : biconf
 
 static int biconf_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                      int key_size)
+                                      unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;
@@ -136,7 +136,7 @@ Algorithm biconf_complement_algorithm(
 // Name in Andre Reis Thesis : yanetal (Yan et al.)
 
 static int yanetal_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                       int key_size)
+                                       unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;
@@ -166,7 +166,7 @@ Algorithm yanetal_algorithm(
 // Name in Andre Reis Thesis : -
 
 static int option3456_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                          int key_size)
+                                          unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;
@@ -216,7 +216,7 @@ Algorithm option4_algorithm(
 // Name in Andre Reis Thesis : option-7
 
 static int option7_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                       int key_size)
+                                       unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;
@@ -246,7 +246,7 @@ Algorithm option7_algorithm(
 // Name in Andre Reis Thesis : option-8
 
 static int option8_block_size_function(int iteration_nr, double estimated_bit_error_rate,
-                                       int key_size)
+                                       unsigned long key_size)
 {
     if (estimated_bit_error_rate < min_estimated_bit_error_rate) {
         estimated_bit_error_rate = min_estimated_bit_error_rate;

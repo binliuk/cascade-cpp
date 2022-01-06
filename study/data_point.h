@@ -11,11 +11,11 @@ namespace Cascade {
 class DataPoint
 {
 public:
-    DataPoint(const std::string& algorithm_name, int key_size, double requested_bit_error_rate);
+    DataPoint(const std::string& algorithm_name, unsigned long key_size, double requested_bit_error_rate);
     void record_reconciliation_stats(const Cascade::Stats& stats);
     std::string to_json() const;
     std::string algorithm_name;
-    int key_size;
+    unsigned long key_size;
     double requested_bit_error_rate;
     long reconciliations;
     AggregateStats actual_bit_errors;

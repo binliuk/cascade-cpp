@@ -3,7 +3,7 @@
 #include <iomanip>
 #include <sstream>
 
-DataPoint::DataPoint(const std::string& algorithm_name, int key_size,
+DataPoint::DataPoint(const std::string& algorithm_name, unsigned long key_size,
                      double requested_bit_error_rate):
     algorithm_name(algorithm_name),
     key_size(key_size),

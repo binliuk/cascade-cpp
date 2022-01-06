@@ -34,7 +34,7 @@ void fatal_perror(const std::string& message)
     }
 }
 
-void one_data_point_run(DataPoint& data_point, const std::string& algorithm_name, int key_size,
+void one_data_point_run(DataPoint& data_point, const std::string& algorithm_name, unsigned long key_size,
                         double error_rate)
 {
     const Cascade::Algorithm* algorithm = Cascade::Algorithm::get_by_name(algorithm_name);
@@ -66,7 +66,7 @@ void one_data_point_run(DataPoint& data_point, const std::string& algorithm_name
     DEBUG("remaining_bit_errors=" << remaining_bit_errors);
 }
 
-void produce_one_data_point(const std::string& algorithm, int key_size, double error_rate, int runs,
+void produce_one_data_point(const std::string& algorithm, unsigned long key_size, double error_rate, int runs,
                             std::ofstream& data_file)
 {
     {

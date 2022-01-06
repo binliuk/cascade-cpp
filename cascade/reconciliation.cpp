@@ -69,7 +69,7 @@ double Reconciliation::compute_efficiency(long reconciliation_bits) const
 {
     double eps = estimated_bit_error_rate;
     double shannon_efficiency = -eps * log2(eps) - (1.0 - eps) * log2(1.0 - eps);
-    int key_size = reconciled_key.get_nr_bits();
+    unsigned long key_size = reconciled_key.get_nr_bits();
     double efficiency = double(reconciliation_bits) / (double(key_size) * shannon_efficiency);
     return efficiency;
 }
